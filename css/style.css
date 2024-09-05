@@ -163,7 +163,7 @@ body
 
 .search 
 {
-  min-width: : 9vw;
+  min-width: : 20vw;
   height: 6vw;
   background-color: var(--color-z);
   border-radius: 8px;
@@ -175,6 +175,7 @@ body
   box-shadow: 0 0 10px var(--color-s);
   color: var(--color-p);
   outline: none;
+  font-size: 2vw
 }
 
 .more
@@ -194,6 +195,7 @@ body
   box-shadow: 0px 4px 10px #0000003e;
   font-family: 'warm';
   transition: 0.4s;
+  outline: none;
 }
 .more:hover
 {
