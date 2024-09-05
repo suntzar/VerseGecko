@@ -163,10 +163,10 @@ body
 
 .search 
 {
-  min-width: : 40vw;
+  min-width: : 50vw;
   height: 6vw;
   background-color: var(--color-z);
-  border-radius: 25%;
+  border-radius: 2vw;
   position: relative;
   margin: 6vh 0 -4vh 0;
   text-align: center;
