@@ -163,8 +163,8 @@ body
 
 .search 
 {
-  min-width: : 66px;
-  height: 33px;
+  min-width: : 9vw;
+  height: 6vw;
   background-color: var(--color-z);
   border-radius: 8px;
   position: relative;
