@@ -1,147 +1,70 @@
-
-// Função para atualizar a imagem do ícone de forma aleatória
-function atualizarIconeAleatorio() {
-  const numeroImagem = Math.floor(Math.random() * 21) + 1;
-  document.getElementById("iconr").src = `images/icon (${numeroImagem}).jpg`;
-}
-
-// Array com a quantidade de capítulos por livro
 const livros = {
-  10: 50, // Gênesis
-  20: 40, // Êxodo
-  30: 27, // Levítico
-  40: 36, // Números
-  50: 34, // Deuteronômio
-  60: 24, // Josué
-  70: 21, // Juízes
-  80: 4,  // Rute
-  90: 31, // 1Samuel
-  100: 24, // 2Samuel
-  110: 22, // 1Reis
-  120: 25, // 2Reis
-  130: 29, // 1Crônicas
-  140: 36, // 2Crônicas
-  150: 10, // Esdras
-  160: 13, // Neemias
-  190: 10, // Ester
-  220: 42, // Jó
-  230: 150, // Salmos
-  240: 31, // Provérbios
-  250: 12, // Eclesiastes
-  260: 8,  // Cântico dos Cânticos
-  290: 66, // Isaías
-  300: 52, // Jeremias
-  310: 5,  // Lamentações
-  330: 48, // Ezequiel
-  340: 12, // Daniel
-  350: 14, // Oséias
-  360: 3,  // Joel
-  370: 9,  // Amós
-  380: 1,  // Obadias
-  390: 4,  // Jonas
-  400: 7,  // Miqueias
-  410: 3,  // Naum
-  420: 3,  // Habacuque
-  430: 3,  // Sofonias
-  440: 2,  // Ageu
-  450: 14, // Zacarias
-  460: 4,  // Malaquias
-  470: 28, // Mateus
-  480: 16, // Marcos
-  490: 24, // Lucas
-  500: 21, // João
-  510: 28, // Atos
-  520: 16, // Romanos
-  530: 16, // 1Coríntios
-  540: 13, // 2Coríntios
-  550: 6,  // Gálatas
-  560: 6,  // Efésios
-  570: 4,  // Filipenses
-  580: 4,  // Colossenses
-  590: 5,  // 1Tessalonicenses
-  600: 3,  // 2Tessalonicenses
-  610: 6,  // 1Timóteo
-  620: 4,  // 2Timóteo
-  630: 3,  // Tito
-  640: 1,  // Filemom
-  650: 13, // Hebreus
-  660: 5,  // Tiago
-  670: 5,  // 1Pedro
-  680: 3,  // 2Pedro
-  690: 5,  // 1João
-  700: 1,  // 2João
-  710: 1,  // 3João
-  720: 1,  // Judas
-  730: 22  // Apocalipse
-};
-
-const nomelivros = {
-  10: 'GÊNESIS',
-  20: 'ÊXODO',
-  30: 'LEVÍTICO',
-  40: 'NÚMEROS',
-  50: 'DEUTERONÔMIO',
-  60: 'JOSUÉ',
-  70: 'JUÍZES',
-  80: 'RUTE',
-  90: '1SAMUEL',
-  100: '2SAMUEL',
-  110: '1REIS',
-  120: '2REIS',
-  130: '1CRÔNICAS',
-  140: '2CRÔNICAS',
-  150: 'ESDRAS',
-  160: 'NEEMIAS',
-  190: 'ESTER',
-  220: 'JÓ',
-  230: 'SALMOS',
-  240: 'PROVÉRBIOS',
-  250: 'ECLESIASTES',
-  260: 'CÂNTICO DOS CÂNTICOS',
-  290: 'ISAÍAS',
-  300: 'JEREMIAS',
-  310: 'LAMENTAÇÕES',
-  330: 'EZEQUIEL',
-  340: 'DANIEL',
-  350: 'OSÉIAS',
-  360: 'JOEL',
-  370: 'AMÓS',
-  380: 'OBADIAS',
-  390: 'JONAS',
-  400: 'MIQUEIAS',
-  410: 'NAUM',
-  420: 'HABACUQUE',
-  430: 'SOFONIAS',
-  440: 'AGEU',
-  450: 'ZACARIAS',
-  460: 'MALAQUIAS',
-  470: 'MATEUS',
-  480: 'MARCOS',
-  490: 'LUCAS',
-  500: 'JOÃO',
-  510: 'ATOS',
-  520: 'ROMANOS',
-  530: '1CORÍNTIOS',
-  540: '2CORÍNTIOS',
-  550: 'GÁLATAS',
-  560: 'EFÉSIOS',
-  570: 'FILIPENSES',
-  580: 'COLOSSENSES',
-  590: '1TESSALONICENSES',
-  600: '2TESSALONICENSES',
-  610: '1TIMÓTEO',
-  620: '2TIMÓTEO',
-  630: 'TITO',
-  640: 'FILEMOM',
-  650: 'HEBREUS',
-  660: 'TIAGO',
-  670: '1PEDRO',
-  680: '2PEDRO',
-  690: '1JOÃO',
-  700: '2JOÃO',
-  710: '3JOÃO',
-  720: 'JUDAS',
-  730: 'APOCALIPSE'
+  10: ['GÊNESIS', 50],
+  20: ['ÊXODO', 40],
+  30: ['LEVÍTICO', 27],
+  40: ['NÚMEROS', 36],
+  50: ['DEUTERONÔMIO', 34],
+  60: ['JOSUÉ', 24],
+  70: ['JUÍZES', 21],
+  80: ['RUTE', 4],
+  90: ['1SAMUEL', 31],
+  100: ['2SAMUEL', 24],
+  110: ['1REIS', 22],
+  120: ['2REIS', 25],
+  130: ['1CRÔNICAS', 29],
+  140: ['2CRÔNICAS', 36],
+  150: ['ESDRAS', 10],
+  160: ['NEEMIAS', 13],
+  190: ['ESTER', 10],
+  220: ['JÓ', 42],
+  230: ['SALMOS', 150],
+  240: ['PROVÉRBIOS', 31],
+  250: ['ECLESIASTES', 12],
+  260: ['CÂNTICO DOS CÂNTICOS', 8],
+  290: ['ISAÍAS', 66],
+  300: ['JEREMIAS', 52],
+  310: ['LAMENTAÇÕES', 5],
+  330: ['EZEQUIEL', 48],
+  340: ['DANIEL', 12],
+  350: ['OSÉIAS', 14],
+  360: ['JOEL', 3],
+  370: ['AMÓS', 9],
+  380: ['OBADIAS', 1],
+  390: ['JONAS', 4],
+  400: ['MIQUEIAS', 7],
+  410: ['NAUM', 3],
+  420: ['HABACUQUE', 3],
+  430: ['SOFONIAS', 3],
+  440: ['AGEU', 2],
+  450: ['ZACARIAS', 14],
+  460: ['MALAQUIAS', 4],
+  470: ['MATEUS', 28],
+  480: ['MARCOS', 16],
+  490: ['LUCAS', 24],
+  500: ['JOÃO', 21],
+  510: ['ATOS', 28],
+  520: ['ROMANOS', 16],
+  530: ['1CORÍNTIOS', 16],
+  540: ['2CORÍNTIOS', 13],
+  550: ['GÁLATAS', 6],
+  560: ['EFÉSIOS', 6],
+  570: ['FILIPENSES', 4],
+  580: ['COLOSSENSES', 4],
+  590: ['1TESSALONICENSES', 5],
+  600: ['2TESSALONICENSES', 3],
+  610: ['1TIMÓTEO', 6],
+  620: ['2TIMÓTEO', 4],
+  630: ['TITO', 3],
+  640: ['FILEMOM', 1],
+  650: ['HEBREUS', 13],
+  660: ['TIAGO', 5],
+  670: ['1PEDRO', 5],
+  680: ['2PEDRO', 3],
+  690: ['1JOÃO', 5],
+  700: ['2JOÃO', 1],
+  710: ['3JOÃO', 1],
+  720: ['JUDAS', 1],
+  730: ['APOCALIPSE', 22]
 };
 
 function removerAcentos(str) {
@@ -156,15 +79,15 @@ function encontrarLivro() {
   
   if ( input === "") {
   for (let idLivro in livros) {
-    acumulado += livros[idLivro];
+    acumulado += livros[idLivro][1];
     if (capitulo <= acumulado) {
-      carregarVersiculos(idLivro,capitulo - (acumulado - livros[idLivro]));
+      carregarVersiculos(idLivro,capitulo - (acumulado - livros[idLivro][1]));
       break;
     }
   }
   } else {
-    for (let livro in nomelivros) {
-      if (removerAcentos(nomelivros[livro]).toLowerCase() === removerAcentos(book).toLowerCase()) {
+    for (let livro in livros) {
+      if (removerAcentos(livros[livro][0]).toLowerCase() === removerAcentos(book).toLowerCase()) {
         carregarVersiculos(livro, parseInt(numero));
         break;
       }
@@ -231,8 +154,8 @@ async function carregarVersiculos(livro, capitulo) {
     }
   }
   
-  document.getElementById('title').innerHTML = "<h2 class='title'>" + nomelivros[livro] + " " + capitulo + "</h2>";
-  //document.getElementById('search').placeholder = nomelivros[livro] + " " + capitulo;
+  document.getElementById('title').innerHTML = "<h2 class='title'>" + livros[livro][0] + " " + capitulo + "</h2>";
+  //document.getElementById('search').placeholder = livros[livro] + " " + capitulo;
   document.getElementById('verses').innerHTML = textos;
 }
 
@@ -245,12 +168,11 @@ Mverse.addEventListener("click", function() {
 
 function pallet() {
   let link = document.documentElement.style;
-
-  link.setProperty('--color-f', '#e4e1e2');
+  link.setProperty('--color-f', '#e4e1e2a5');
   link.setProperty('--color-p', '#9bbf93');
   link.setProperty('--color-s', '#9bbf939b');
   link.setProperty('--color-sf', '#768c77');
-  link.setProperty('--color-z', '#3F3D4A');
+  link.setProperty('--color-z', '#3b3b44');
   link.setProperty('--color-zf', '#3f3d4a9d');
   link.setProperty('--color-y', '#4f4d5b');
   link.setProperty('--color-yf', '#4d4e5bb7');
@@ -258,109 +180,145 @@ function pallet() {
   link.setProperty('--color-b', '#1c1b21');
 }
 
+function palllet() {
+  let link = document.documentElement.style;
+  link.setProperty('--color-f', '#898992');
+  link.setProperty('--color-p', '#accaa6');
+  link.setProperty('--color-s', '#9bbf939b');
+  link.setProperty('--color-sf', '#768c77');
+  link.setProperty('--color-z', '#ededef');
+  link.setProperty('--color-zf', '#3f3d4a9d');
+  link.setProperty('--color-y', '#4f4d5b');
+  link.setProperty('--color-yf', '#ededef59');
+  link.setProperty('--color-d', '#313038');
+  link.setProperty('--color-b', '#1c1b21');
+}
+
 function marcar(i) {
   let idSt = 6578431209;
   
-  /*
   let type = "marcar";
-  let marcar = JSON.parse(localStorage.getItem('6578431209')) || {};
-  
-  if (marcar[i-1] === "" && marcar[i+1] === "") {
-    type = "marcar";
-  } else if  (marcar[i-1] === null && marcar[i+1] === null) {
-    type = "marcar";
-  } else if  (marcar[i-1] === "" && marcar[i+1] === null) {
-    type = "marcar";
-  } else if  (marcar[i-1] === null && marcar[i+1] === "") {
-    type = "marcar";
-  } else if (marcar[i+1] === "") {
-    type = "marcar-c";
-  } else if (marcar[i-1] === "") {
-    type = "marcar-b";
-  } else {
-    type = "marcar-m";
-  }
-  
-  //localStorage.removeItem(6578431209)
-
+  let marcar = JSON.parse(localStorage.getItem('6578431209')) || [];
   let verse = document.getElementById(`verse_${i}`);
   
-  if (verse.className.match("marcar")) {
+  if (marcar[i-1].match("marcar") && marcar[i+1].match("marcar")) {
+    type = "marcar-m";
+  } else if (marcar[i-1].match("marcar")) {
+    type = "marcar-b";
+  } else if (marcar[i+1].match("marcar")) {
+    type = "marcar-c";
+  } else {
+    type = "marcar"
+  }
+  
+  if (type === "marcar-m") {
+    if (marcar[i-2].match("marcar")) { 
+      marcar[i-1] = "marcar-m";
+    } else {
+      marcar[i-1] = "marcar-c";
+    }
+    if (marcar[i+2].match("marcar")) { 
+      marcar[i+1] = "marcar-m";
+    } else {
+    marcar[i+1] = "marcar-b";
+    }
+  }
+  
+  if (type === "") {
+    if (marcar[i-2].match("marcar")) { 
+      marcar[i-1] = "";
+    } else {
+      marcar[i-1] = "marcar";
+    }
+    if (marcar[i+2].match("marcar")) { 
+      marcar[i+1] = "marcar-m";
+    } else {
+    marcar[i+1] = "marcar-b";
+    }
+  }
+  
+  if (type === "marcar-c") {
+    if (marcar[i+2].match("marcar")) { 
+      marcar[i+1] = "marcar-m";
+    } else {
+      marcar[i+1] = "marcar-b";
+    }
+  }
+  
+  if (type === "marcar-b") {
+    if (marcar[i-2].match("marcar")) { 
+      marcar[i-1] = "marcar-m";
+    } else {
+      marcar[i-1] = "marcar-c";
+    }
+  }
+  
+  if (type === "marcarf-b") {
+    if (marcar[i+2].match("marcar")) { 
+      //marcar[i+1] = "marcar-m";
+    } else {
+    marcar[i+1] = "marcar-b";
+    }
+  }
+  
+  if (marcar[i].match("marcar")) {
     marcar[i] = "";
   } else {
-    marcar[i] = "marcar";
+    marcar[i] = type;
   }
   
-  localStorage.setItem(idSt, JSON.stringify(marcar));
-  console.log(JSON.parse(localStorage.getItem(6578431209)))
-  */
-  /*
-  for (let k = 1; k < 101; k++) {
-    if (marcar[i+(k-49)].match("marcar") && marcar[i+(k-51)].match("marcar")) {
-      marcar[i+(k-50)] = "marcar-m";
-    } else if (marcar[i+(k-49)].match("marcar")) {
-      marcar[i+(k-50)] = "marcar-b";
-    } else if (marcar[i+(k-51)].match("marcar")) {
-      marcar[i+(k-50)] = "marcar-c";
-      marcar[i+(k-51)] = "marcar-b";
+  if (marcar[i-1].match("marcar") && !marcar[i].match("marcar")) {
+    if (!marcar[i-2].match("marcar")) {
+      marcar[i-1] = "marcar";
     } else {
-      marcar[i] = "marcar";
+      marcar[i-1] = "marcar-b";
     }
-    verse = document.getElementById(`verse_${i+(k-50)}`);
-    verse.className = ("v "+marcar[i+(k-50)]);
   }
-*/
   
-//localStorage.removeItem(6578431209)
-  //console.log("v marcar".match("marcar") === true)
-  //console.log(verse.className)
-  //console.log(type)
-  //console.log(JSON.parse(localStorage.getItem(6578431209)))
-  //localStorage.setItem(idSt, JSON.stringify(marcar));
+  if (marcar[i+1].match("marcar") && !marcar[i].match("marcar")) {
+    if (!marcar[i+2].match("marcar")) {
+      marcar[i+1] = "marcar";
+    } else {
+      marcar[i+1] = "marcar-c";
+    }
+  }
   
+  for (let k = -2; k < 3; k++) {
+    verse = document.getElementById(`verse_${i+k}`);
+    if (verse) {
+      verse.className = "v " + marcar[i+k];
+    }
+  }
+
+  localStorage.setItem(idSt, JSON.stringify(marcar));
 }
+
+//localStorage.removeItem(6578431209);
 
 function cache() {
   let idSt = 6578431209;
+  console.log(JSON.parse(localStorage.getItem(idSt)));
   
-  let marcar = JSON.parse(localStorage.getItem(idSt)) || {};
+  let marcar = JSON.parse(localStorage.getItem(idSt)) || [];
   
   for (let h = 0; h < 31003; h++) {
-    if (marcar[h] !== "" || !marcar[h].match("marcar")) {
+    if (!marcar[h]) {
       marcar[h] = "";
     }
   }
   
+  console.log(marcar);
   localStorage.setItem(idSt, JSON.stringify(marcar));
-  console.log(JSON.parse(localStorage.getItem(idSt)));
 }
-
-
-
-
-function marcarRam() {
-  // Criar item:
-  let meuObjeto = { nome: 'Alice', idade: 30 };
-  localStorage.setItem('usuario', JSON.stringify(meuObjeto));
-
-  // Ler item:
-  let usuarioSalvo = JSON.parse(localStorage.getItem('usuario'));
-  console.log(usuarioSalvo.nome); // Saída: Alice
-}
-
-//localStorage.setItem(6578431209, JSON.stringify(JSON.parse(localStorage.getItem('6578431209')) || {}));
 
 // Adicionando os event listeners para carregar as funções quando a janela for carregada
-//window.addEventListener('load', atualizarIconeAleatorio);
+window.addEventListener('load', cache);
 window.addEventListener('load', encontrarLivro);
 window.addEventListener('load', pallet);
-//window.addEventListener('load', cache);
 
+//////////
 
-// 730 7
-// 230 3
-
-/*
+/* ANOTAÇÕES: 
 const textos = versiculos
     .filter(versiculo => versiculo.chapter === 3 && versiculo.book_number === 230)
     .map(versiculo => `<p style='padding:1.8%;'><b>${versiculo.verse}</b> ${versiculo.text}</p>`)

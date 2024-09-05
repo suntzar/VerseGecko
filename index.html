@@ -3,30 +3,32 @@
   <head>
     <title>Verse Gecko</title>
     <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <div class="container">
-      <p class="tbar">VERSE GECKO</p>
-      <div style="padding: 10%;"></div>
-      <!-- img id="iconr" src="" class="icon" -->
-      <div style="padding: 5%;"></div>
+     <!-- BARRA DE TITULO -->
+      <p class="tbar"><span style="color: var(--color-p);font-family: 'warm';">LEEF</span> VERSE</p>
+      <div style="padding: 15%;"></div>
+     <!-- TITULO(LIVRO) -->
       <div id="title" class="title"></div>
       <div style="padding: 1%;"></div>
-      <p id="subt" class="subt">Provérbios de Salomão</p>
+     <!-- SUBTITULO(TITULO) -->
+      <p id="subt" class="subt"></p>
       <div style="padding: 0%;"></div>
+     <!-- VERSICULOS -->
       <div class="txtbox">
-      <div id="verses" class="v"></div>
-      <div style="padding: 20%;"></div>
+        <div id="verses" class="v"></div>
+        <div style="padding: 20%;"></div>
       </div>
+     <!-- BARRA INFERIOR -->
       <div class="box">
-        <center>
-          <button onclick="encontrarLivro();" class="more"><b>MAIS</b></button>
-        </center>
-        <!--div class="scroll">1<br>2<br>3<br>4<br>5</div -->
+        <center> <button onclick="encontrarLivro();" class="more"><b>MAIS</b></button> </center>
         <input type="text" class="search" id="search" placeholder="aleatório">
       </div>
     </div>
+   <!-- JS -->
     <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
@@ -34,7 +36,5 @@
 <!-- ANOTAÇÕES:
 
   onclick="carregarVersiculos(); atualizarIconeAleatorio();"
-
-
 
 -->

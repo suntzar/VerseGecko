@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Flow+Rounded&family=M+PLUS+Rounded+1c&family=Varela+Round&display=swap');
+
 :root
 {
 --color-p: #ffdb99; 
@@ -10,6 +12,8 @@
   margin: 0;
   box-sizing: border-box;
   font-family: console;
+  font-family: "Flow Rounded", system-ui;
+  font-family: "Varela Round", sans-serif;
 }
 
 @font-face 
@@ -38,6 +42,7 @@ body
   justify-content: center;
   background: var(--color-z);
   color: var(--color-f);
+  font-family: console;
 }
 
 .container
@@ -92,7 +97,7 @@ body
   width: 100%;
   font-size: 2.5vw;
   color: var(--color-f);
-  opacity: 0.8;
+  /*opacity: 0.8;*/
   text-align: justify;
   transition: 1s;
   border-radius: 8px;
@@ -101,7 +106,7 @@ body
 .marcar, .marcar-c, .marcar-b, .marcar-m
 {
   color: var(--color-p);
-  background: var(--color-y);
+  background: var(--color-yf);
   opacity: 1;
   border-radius: 8px;
 }
@@ -132,6 +137,7 @@ body
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 0 20px #0000001d;
 }
 
 .box:hover 
@@ -175,8 +181,8 @@ body
 {
   width: 25vw;
   height: 10vw;
-  color: var(--color-f);
-  background-color: var(--color-sf);
+  color: var(--color-z);
+  background-color: var(--color-p);
   backdrop-filter: blur(3px);
   border-radius: 5vw;
   border: none;
@@ -207,15 +213,8 @@ body
   overflow: hidden;
 }
 
+/*, .title, .tbar, h, p, .subt, span{font-family: "Flow Rounded", system-ui;}*/
 
-body::-webkit-scrollbar {
-    width: 12px; /* Largura da barra de rolagem */
-}
-body::-webkit-scrollbar-track {
-    background: orange; /* Cor da área de rastreamento */
-}
-body::-webkit-scrollbar-thumb {
-    background-color: blue; /* Cor do polegar da rolagem */
-    border-radius: 20px; /* Arredondamento do polegar */
-    border: 3px solid red; /* Borda ao redor do polegar */
-}
+
+
+
