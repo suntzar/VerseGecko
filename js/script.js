@@ -166,7 +166,7 @@ Mverse.addEventListener("click", function() {
 });
 */
 
-function pallet() {
+function pallet_d() {
   let link = document.documentElement.style;
   link.setProperty('--color-f', '#e4e1e2a5');
   link.setProperty('--color-p', '#9bbf93');
@@ -176,6 +176,20 @@ function pallet() {
   link.setProperty('--color-zf', '#3f3d4a9d');
   link.setProperty('--color-y', '#4f4d5b');
   link.setProperty('--color-yf', '#4d4e5bb7');
+  link.setProperty('--color-d', '#313038');
+  link.setProperty('--color-b', '#1c1b21');
+}
+
+function pallet_g() {
+  let link = document.documentElement.style;
+  link.setProperty('--color-f', '#e4e1e2a5');
+  link.setProperty('--color-p', '#b9a990');
+  link.setProperty('--color-s', '#9c8b70');
+  link.setProperty('--color-sf', '#768c77');
+  link.setProperty('--color-z', '#27272a'); // #252528
+  link.setProperty('--color-zf', '#3f3d4a9d');
+  link.setProperty('--color-y', '#2c2c2e');
+  link.setProperty('--color-yf', '#363639c3');
   link.setProperty('--color-d', '#313038');
   link.setProperty('--color-b', '#1c1b21');
 }
@@ -314,7 +328,7 @@ function cache() {
 // Adicionando os event listeners para carregar as funções quando a janela for carregada
 window.addEventListener('load', cache);
 window.addEventListener('load', encontrarLivro);
-window.addEventListener('load', pallet);
+window.addEventListener('load', pallet_g);
 
 //////////
 
