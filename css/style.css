@@ -166,7 +166,7 @@ body
   min-width: : 40vw;
   height: 6vw;
   background-color: var(--color-z);
-  border-radius: 4vw;
+  border-radius: 25%;
   position: relative;
   margin: 6vh 0 -4vh 0;
   text-align: center;
